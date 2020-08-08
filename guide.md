@@ -7,4 +7,5 @@
     - prism: markdown 支持不同语言语法
     - copy code: 复制代码到剪切板
 - 静态页面托管: [coding](https://coding.net/)
+  - 自动部署
   - cname + https + 首选域名
