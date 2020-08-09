@@ -9,3 +9,8 @@
 - 静态页面托管: [coding](https://coding.net/)
   - 自动部署
   - cname + https + 首选域名
+
+# todo
+
+- edit on github 无法生效: https://docsify.js.org/#/plugins?id=edit-on-github
+- 实现 github/coding 同步
