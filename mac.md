@@ -1,24 +1,3 @@
-- mac 按键符号 https://support.apple.com/zh-cn/guide/mac-help/cpmh0011/mac
-- Command（或 Cmd）⌘
-- Shift ⇧
-- Option（或 Alt）⌥
-- Control（或 Ctrl）⌃
-- Caps Lock ⇪
-- Fn
-
-```sh
-# mac 取消密码限制
-pwpolicy -clearaccountpolicies
-# 修改密码
-passwd
-
-# 从任何来源安装软件
-sudo spctl --master-disable
-
-# homebrew 太慢
-brew install 会先执行 brew update, 可使用 ctrl-c 跳过
-```
-
 ## mark
 
 - 如果使用 docker, 推荐 16g+
@@ -106,25 +85,22 @@ csrutil disable
 pwpolicy -clearaccountpolicies
 passwd # 修改密码
 
-# 删除默认输入法
-cd ~/Library/Preferences
-cp com.apple.HIToolbox.plist com.apple.HIToolbox.plist.bak
-sudo open com.apple.HIToolbox.plist # 关闭SIP -> 切换到默认输入法, 才能保存 -> 安装xcode, 也可以 xed com.apple.HIToolbox.plist -> 重启
-
-# 干掉 dock
-defaults write com.apple.dock autohide-delay -int 100 # 100s, 配合自动隐藏
-killall Dock
-
-# 七牛图片高级处理: https://developer.qiniu.com/dora/manual/1270/the-advanced-treatment-of-images-imagemogr2
-?imageMogr2/auto-orient/thumbnail/500x500 # 自动旋转; 等比限宽+高缩放
-?imageMogr2/rotate/-90 # 旋转
-
 # dns
 networksetup -listallnetworkservices
 networksetup -setdnsservers Wi-Fi 180.76.76.76 223.5.5.5 # baidu/ali dns
 networksetup -getdnsservers Wi-Fi
 dscacheutil -flushcache
 ```
+
+## mac 按键
+
+- mac 按键符号 https://support.apple.com/zh-cn/guide/mac-help/cpmh0011/mac
+- Command（或 Cmd）⌘
+- Shift ⇧
+- Option（或 Alt）⌥
+- Control（或 Ctrl）⌃
+- Caps Lock ⇪
+- Fn
 
 ## pdf 工具
 - clear view: 看
